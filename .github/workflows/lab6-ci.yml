@@ -1,0 +1,49 @@
+name: Lab6 .NET Build & Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore Lab6_WeatherSolution.sln
+
+      - name: Build
+        run: dotnet build Lab6_WeatherSolution.sln --configuration Release --no-restore
+
+      - name: Run unit tests
+        run: dotnet test tests/Lab6.Tests/Lab6.Tests.csproj --configuration Release --no-build --verbosity normal
+
+  run-app:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    env:
+      OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Run application (manual)
+        run: dotnet run --project src/Lab6App/Lab6App.csproj --configuration Release --no-build || true

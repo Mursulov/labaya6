@@ -1,0 +1,15 @@
+/workspaces/labaya6/src/Lab6App/bin/Debug/net8.0/Lab6App
+/workspaces/labaya6/src/Lab6App/bin/Debug/net8.0/Lab6App.deps.json
+/workspaces/labaya6/src/Lab6App/bin/Debug/net8.0/Lab6App.runtimeconfig.json
+/workspaces/labaya6/src/Lab6App/bin/Debug/net8.0/Lab6App.dll
+/workspaces/labaya6/src/Lab6App/bin/Debug/net8.0/Lab6App.pdb
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.AssemblyInfoInputs.cache
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.AssemblyInfo.cs
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.csproj.CoreCompileInputs.cache
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.sourcelink.json
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.dll
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/refint/Lab6App.dll
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.pdb
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/Lab6App.genruntimeconfig.cache
+/workspaces/labaya6/src/Lab6App/obj/Debug/net8.0/ref/Lab6App.dll
